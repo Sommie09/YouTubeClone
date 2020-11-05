@@ -1,4 +1,4 @@
-package com.example.youtubeclone
+package com.example.youtubeclone.model
 
 class HomeFeed(val videos: List<Video>)
 

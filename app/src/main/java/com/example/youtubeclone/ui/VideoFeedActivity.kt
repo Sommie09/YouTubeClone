@@ -1,20 +1,22 @@
-package com.example.youtubeclone
+package com.example.youtubeclone.ui
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.youtubeclone.model.HomeFeed
+import com.example.youtubeclone.adapter.MainAdapter
+import com.example.youtubeclone.R
 import com.google.gson.GsonBuilder
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_video_feed.*
 import okhttp3.*
 import java.io.IOException
 
-class MainActivity : AppCompatActivity() {
+class VideoFeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_video_feed)
 
-        recycler_view.layoutManager = LinearLayoutManager(this)
+        recycler_view_video_feed.layoutManager = LinearLayoutManager(this)
 
 
         fetchJson()
@@ -40,7 +42,8 @@ class MainActivity : AppCompatActivity() {
                 val homeFeed = gson.fromJson(body, HomeFeed::class.java)
 
                 runOnUiThread{
-                    recycler_view.adapter = MainAdapter(homeFeed)
+                    recycler_view_video_feed.adapter =
+                        MainAdapter(homeFeed)
                 }
 
             }
