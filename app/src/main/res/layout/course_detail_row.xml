@@ -6,18 +6,18 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/course_lesson_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Course lesson Title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/course_lesson_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/course_lesson_image"
         android:layout_width="140dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -25,15 +25,15 @@
         app:layout_constraintDimensionRatio="h,16:9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/course_duration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/course_lesson_title"
+        app:layout_constraintStart_toStartOf="@+id/course_lesson_title"
+        app:layout_constraintTop_toBottomOf="@+id/course_lesson_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

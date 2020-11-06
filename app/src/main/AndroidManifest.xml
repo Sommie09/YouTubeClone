@@ -20,7 +20,19 @@
                 android:value=".ui.VideoFeedActivity">
             </meta-data>
         </activity>
-        <activity android:name=".ui.VideoFeedActivity">
+
+        <activity android:name=".ui.CourseLessonActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.CourseDetailActivity"
+                >
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".ui.VideoFeedActivity"
+            android:theme="@style/YouTube"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
